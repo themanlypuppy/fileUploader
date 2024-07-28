@@ -51,6 +51,11 @@ app.post('/assemble', (req, res) => {
   res.send('File assembled successfully');
 });
 
+// Add the ping route
+app.get('/ping', (req, res) => {
+  res.send('pong');
+});
+
 // Start the server
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server is running at http://localhost:${port}`);
